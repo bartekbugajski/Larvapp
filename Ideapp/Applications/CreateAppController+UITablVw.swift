@@ -40,8 +40,8 @@ extension ApplicationsController {
         }
         deleteAction.backgroundColor = UIColor.subHeader
         // This is for the 'Edit' when you slide
-        let editAction = UITableViewRowAction(style: .normal, title: "Edit", handler: editHandlerFunction)
-        return [deleteAction, editAction]
+        //let editAction = UITableViewRowAction(style: .normal, title: "Edit", handler: editHandlerFunction)
+        return [deleteAction]//, editAction*/
     }
     
     private func editHandlerFunction(action: UITableViewRowAction, indexPath: IndexPath) {

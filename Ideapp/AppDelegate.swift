@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.makeKeyAndVisible()
         
-        let appsController = ApplicationsAutoUpdateController()
+        let appsController = ApplicationsController()
       //  dummyViewController.view.backgroundColor = .blue
         let navController = CustomNavigationController(rootViewController: appsController)
         window?.rootViewController = navController

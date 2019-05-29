@@ -7,5 +7,7 @@ target 'Ideapp' do
 
   # Pods for Ideapp
   pod "ViewAnimator"
+  pod "CenteredCollectionView"
+  
 
 end

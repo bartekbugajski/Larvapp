@@ -133,7 +133,7 @@ class EditApplicationDetailsController: UIViewController, UIImagePickerControlle
         setupUI()
         navigationItem.title = application?.name
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(handleSave))
-        view.backgroundColor = .secondSubHeader
+        view.backgroundColor = .cellColor
         
     }
 

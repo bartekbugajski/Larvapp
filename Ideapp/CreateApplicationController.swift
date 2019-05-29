@@ -124,7 +124,7 @@ class CreateApplicationController: UIViewController, UINavigationControllerDeleg
   */
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .secondSubHeader
+        view.backgroundColor = .cellColor
         
         setupUI()
         setupCancelButtonInNavBar()

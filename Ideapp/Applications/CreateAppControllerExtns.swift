@@ -45,6 +45,7 @@ extension CreateApplicationController: UITextViewDelegate {
         application.setValue(nameTextField.text, forKey: "name")
         //application.setValue(notesField.text, forKey: "notes")
         
+        /*
         guard let dateText = dateTextField.text else { return }
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MMM d, yyyy"
@@ -58,6 +59,8 @@ extension CreateApplicationController: UITextViewDelegate {
       //      let imageData = applicationImage.jpegData(compressionQuality: 0.9)
       //      application.setValue(imageData, forKey: "imageData")
     //    }
+ */
+        
         //perform the save
         do {
             try context.save()

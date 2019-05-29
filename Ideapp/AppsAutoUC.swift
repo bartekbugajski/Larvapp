@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+/*
 class ApplicationsAutoUpdateController: UITableViewController, NSFetchedResultsControllerDelegate {
     
     //warning: this code here is going to be a bit of a monster
@@ -111,7 +112,7 @@ class ApplicationsAutoUpdateController: UITableViewController, NSFetchedResultsC
  //           print(application.name ?? "")})
  //       let service = Service()
 //        service.downloadCompaniesFromServer()
-        Service.shared.downloadCompaniesFromServer()
+      //  Service.shared.downloadCompaniesFromServer()
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -160,3 +161,4 @@ class ApplicationsAutoUpdateController: UITableViewController, NSFetchedResultsC
         navigationController?.pushViewController(taskListController, animated: true)
     }
 }
+*/

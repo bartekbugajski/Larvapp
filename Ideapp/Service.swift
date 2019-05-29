@@ -8,7 +8,7 @@
 
 import Foundation
 import CoreData
-
+/*
 struct Service {
     
     static let shared = Service()
@@ -79,3 +79,4 @@ struct JSONApplication: Decodable {
 struct JSONTasks: Decodable {
     let name: String
 }
+*/

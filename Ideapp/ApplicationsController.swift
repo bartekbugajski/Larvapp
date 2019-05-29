@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+
 class ApplicationsController: UITableViewController {
     var applications = [Application]() // empty array
     
@@ -100,11 +101,13 @@ class ApplicationsController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         // fetching refactored inside of Core Data Manager file
         self.applications = CoreDataManager.shared.fetchApplications()
         navigationItem.leftBarButtonItems = [
-        UIBarButtonItem(title: "Delete all", style: .plain, target: self, action: #selector(handleReset)),
-        UIBarButtonItem(title: "Nested Updates", style: .plain, target: self, action: #selector(doNestedUpdates))
+       // UIBarButtonItem(title: "Delete all", style: .plain, target: self, action: #selector(handleReset)),
+        //UIBarButtonItem(title: "Nested Updates", style: .plain, target: self, action: #selector(doNestedUpdates))
         ]
         view.backgroundColor = .white
         navigationItem.title = "my apps"
