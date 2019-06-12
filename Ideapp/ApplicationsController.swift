@@ -112,12 +112,12 @@ class ApplicationsController: UITableViewController {
         view.backgroundColor = .white
         navigationItem.title = "my apps"
         //tableView.rowHeight = 50.0
-        tableView.backgroundColor = .tableBackground
+//        tableView.backgroundColor = .tableBackground
         tableView.separatorStyle = .singleLine
         tableView.separatorColor = .darkGray
         tableView.tableFooterView = UIView() //blank UIView
         tableView.register(ApplicationCell.self, forCellReuseIdentifier: "Cell")
-        setupPlusButtonInNavBar(selector: #selector(handleAddApp))
+//        setupPlusButtonInNavBar(selector: #selector(handleAddApp))
     }
     
     @objc private func handleReset() {
@@ -146,7 +146,7 @@ class ApplicationsController: UITableViewController {
         print("Adding a new app idea...")
         let createApplicationController = CreateApplicationController()
         //createApplicationController.view.backgroundColor = .green
-        let navController = CustomNavigationController(rootViewController: createApplicationController)
+        let navController = UINavigationController(rootViewController: createApplicationController)
         createApplicationController.delegate = self as CreateApplicationControllerDelegate
         present(navController, animated: true, completion: nil)
     }

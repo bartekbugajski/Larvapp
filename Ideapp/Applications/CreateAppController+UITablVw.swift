@@ -13,7 +13,7 @@ extension ApplicationsController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let application = self.applications[indexPath.row]
-        let taskListController = TaskListController()
+        let taskListController = CreateApplicationController()
         //editApplicationDetailsController.delegate = self
         taskListController.application = application
         let navController = CustomNavigationController(rootViewController: taskListController)
@@ -48,7 +48,7 @@ extension ApplicationsController {
         // print("Editing application's name in separate function.")
         let editApplicationController = EditApplicationDetailsController()
         // The following delegate connects 2 of the view controller's pages
-        editApplicationController.delegate = self
+        editApplicationController.delegate = self as EditApplicationDetailsControllerDelegate
         editApplicationController.application = applications[indexPath.row]
         let navController = CustomNavigationController(rootViewController: editApplicationController)
         present(navController, animated: true, completion: nil)

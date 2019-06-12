@@ -113,7 +113,7 @@ extension EditApplicationDetailsController: UITextViewDelegate {
         dateTextField.widthAnchor.constraint(equalToConstant: 100).isActive = true
         //displayDate.bottomAnchor.constraint(equalTo: lightPurpleBackgroundView.bottomAnchor).isActive = true
          */
- 
+        
         view.addSubview(quickNotesField)
         quickNotesField.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10).isActive = true
         quickNotesField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 10).isActive = true

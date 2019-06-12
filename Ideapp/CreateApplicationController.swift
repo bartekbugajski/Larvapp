@@ -15,7 +15,7 @@ protocol CreateApplicationControllerDelegate {
     func didEditApplication(application: Application)
     }
 
-class CreateApplicationController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, EditApplicationDetailsControllerDelegate {
+class CreateApplicationController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     var application: Application? {
         didSet {
             nameTextField.text = application?.name
@@ -23,7 +23,7 @@ class CreateApplicationController: UIViewController, UINavigationControllerDeleg
         // dateIsDisplayed = (application?.created)! as NSDate
         //   if let imageData = application?.imageData {
         //  applicationImageView.image = UIImage(data: imageData)
-                setupCircularImageStyle()
+               // setupCircularImageStyle()
             // }
           //  guard (application?.created) != nil else { return }
         }
@@ -62,7 +62,7 @@ class CreateApplicationController: UIViewController, UINavigationControllerDeleg
         appDescrLabel.textAlignment = .left
         appDescrLabel.textColor = .white
         appDescrLabel.font = UIFont.boldSystemFont(ofSize: 28)
-        appDescrLabel.backgroundColor = .secondSubHeader
+       // appDescrLabel.backgroundColor = .secondSubHeader
         // enable autolayout
         appDescrLabel.translatesAutoresizingMaskIntoConstraints = false
         return appDescrLabel
@@ -71,7 +71,7 @@ class CreateApplicationController: UIViewController, UINavigationControllerDeleg
     let notesField: UITextView = {
         let notesField = UITextView()
         notesField.frame = CGRect(x: 0, y: 0, width: 200, height: 100)
-        notesField.backgroundColor = .secondSubHeader
+       // notesField.backgroundColor = .secondSubHeader
         notesField.translatesAutoresizingMaskIntoConstraints = false
         notesField.font = UIFont.systemFont(ofSize: 15)
         notesField.textColor = UIColor.white
@@ -124,12 +124,13 @@ class CreateApplicationController: UIViewController, UINavigationControllerDeleg
   */
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .cellColor
-        
-        setupUI()
-        setupCancelButtonInNavBar()
-        
         navigationItem.title = application?.name
+       // view.backgroundColor = .cellColor
+        
+        //setupUI()
+      //  setupCancelButtonInNavBar()
+        
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(handleSave))
         
         
@@ -139,9 +140,9 @@ class CreateApplicationController: UIViewController, UINavigationControllerDeleg
     @objc private func handleSave() {
        // print("Trying to save...")
         if application == nil {
-            createApplication()
+       //     createApplication()
         } else {
-            saveApplicationChanges()
+           // saveApplicationChanges()
         }
     }
     

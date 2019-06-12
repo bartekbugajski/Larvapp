@@ -22,6 +22,7 @@ extension CreateApplicationController: UITextViewDelegate {
     func saveApplicationChanges() {
         let context = CoreDataManager.shared.persistentContainer.viewContext
         application?.name = nameTextField.text
+        application?.notes = notesField.text
         //application?.created = dateLabel
         // here I should add the created date application?.date = dateField sth like that
       //  if let applicationImage = applicationImageView.image {
@@ -43,7 +44,7 @@ extension CreateApplicationController: UITextViewDelegate {
         let context = CoreDataManager.shared.persistentContainer.viewContext
         let application = NSEntityDescription.insertNewObject(forEntityName: "Application", into: context) as! Application
         application.setValue(nameTextField.text, forKey: "name")
-        //application.setValue(notesField.text, forKey: "notes")
+        application.setValue(notesField.text, forKey: "notes")
         
         /*
         guard let dateText = dateTextField.text else { return }
@@ -76,7 +77,7 @@ extension CreateApplicationController: UITextViewDelegate {
     
     func setupUI() {
         
-        //let lightPurpleBackgroundView = setupLightPurpleBackgroundView(height: 150)
+        let lightPurpleBackgroundView = setupLightPurpleBackgroundView(height: 150)
         
         view.addSubview(applicationImageView)
         applicationImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
@@ -112,9 +113,11 @@ extension CreateApplicationController: UITextViewDelegate {
         appDescrLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         // nameLabel.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
         // nameLabel.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        */
+        
         
         view.addSubview(notesField)
-        notesField.topAnchor.constraint(equalTo: appDescrLabel.bottomAnchor, constant: 10).isActive = true
+        notesField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 10).isActive = true
         //applicationDescription.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         notesField.bottomAnchor.constraint(equalTo: lightPurpleBackgroundView.bottomAnchor).isActive = true
         //applicationDescription.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10).isActive = true
@@ -123,7 +126,7 @@ extension CreateApplicationController: UITextViewDelegate {
         //applicationDescription.heightAnchor.constraint(equalToConstant: 300).isActive = true
         notesField.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         notesField.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        */
+ 
         
 
         

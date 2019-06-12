@@ -4,11 +4,11 @@
 //
 //  Created by Bartek Bugajski on 18/02/2019.
 //  Copyright © 2019 Lightning Bulb. All rights reserved.
-//
+
 
 import UIKit
 
-extension ApplicationsController: CreateApplicationControllerDelegate, EditApplicationDetailsControllerDelegate {
+extension ApplicationsController: CreateApplicationControllerDelegate {
     
     
     //specify your extension methods here...

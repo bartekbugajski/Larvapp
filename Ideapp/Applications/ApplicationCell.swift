@@ -9,7 +9,6 @@
 import UIKit
 
 class ApplicationCell: UITableViewCell {
-    
     var application: Application? {
     didSet {
         nameCreatedDateLabel.text = application?.name
@@ -51,30 +50,11 @@ class ApplicationCell: UITableViewCell {
         label.text = "Application Name"
         label.numberOfLines = 0
         label.lineBreakMode = NSLineBreakMode.byWordWrapping
-        label.font = .defaultFont
+        //label.font = .defaultFont
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
-        backgroundColor = .cellColor
-        
-    
-        addSubview(applicationImageView)
-        applicationImageView.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        applicationImageView.widthAnchor.constraint(equalToConstant: 40).isActive = true
-        applicationImageView.leftAnchor.constraint(equalTo: leftAnchor, constant: 16).isActive = true
-        applicationImageView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
-        
-        addSubview(nameCreatedDateLabel)
-        nameCreatedDateLabel.leftAnchor.constraint(equalTo: applicationImageView.rightAnchor, constant: 8).isActive = true
-        nameCreatedDateLabel.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
-        nameCreatedDateLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        nameCreatedDateLabel.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
